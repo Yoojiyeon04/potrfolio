@@ -51,7 +51,7 @@
             font-weight: 700;
             display: flex;
             align-items: center;
-            gap: 15px; /* 타이틀과 날짜 사이 간격 */
+            gap: 10px; /* 날짜와 타이틀 사이 간격 */
         } 
 
         .section-title:first-child { margin-top: 0; }
@@ -60,14 +60,15 @@
         .section-title.orange-line { border-left-color: #ffa502; }
         .section-title.black-line { border-left-color: #333; }
 
-        /* --- 노란색 날짜 뱃지 스타일 --- */
-        .date-badge {
-            background-color: #ffeaa7; /* 연한 노란색 */
-            color: #d6a01d; /* 진한 노란색 텍스트 */
-            font-size: 0.85rem;
-            padding: 4px 10px;
-            border-radius: 6px;
+        /* --- 노란색 날짜 스타일 (왼쪽 배치용) --- */
+        .date-prefix {
+            background-color: #fbc531; /* 좀 더 선명한 노란색 */
+            color: #fff; /* 흰색 글씨로 가독성 확보 */
+            font-size: 0.75rem;
+            padding: 2px 8px;
+            border-radius: 4px;
             font-weight: 600;
+            vertical-align: middle;
         }
 
         .project-box { 
@@ -83,8 +84,8 @@
         .project-name { font-size: 1.25rem; margin-top: 0; margin-bottom: 15px; font-weight: 700; } 
         .description { line-height: 1.7; color: #555; margin-bottom: 20px; word-break: keep-all; } 
 
-        .tags { display: flex; flex-wrap: wrap; gap: 8px; } 
-        .tags span { 
+        .꼬리표 { display: flex; flex-wrap: wrap; gap: 8px; } 
+        .꼬리표 span { 
             background-color: #eef6ff; 
             color: #007bff; 
             padding: 5px 12px; 
@@ -93,7 +94,7 @@
             font-weight: 600; 
         } 
         
-        .tags .tag-cert { background-color: #f1f2f6; color: #2f3542; }
+        .꼬리표 .tag-cert { background-color: #f1f2f6; color: #2f3542; }
 
         footer { margin-top: 50px; font-size: 0.85rem; color: #aaa; line-height: 1.6; text-align: center; }
     </style>
@@ -134,9 +135,9 @@
                 </div>
             </div>
 
-            <!-- 자격증 섹션 (날짜 추가) -->
+            <!-- 자격증 섹션 (날짜를 왼쪽으로 이동) -->
             <h2 class="section-title black-line">
-                자격증 <span class="date-badge">2026-05-13</span>
+                <span class="date-prefix">2026.05</span> 자격증
             </h2>
             <div class="project-box">
                 <h3 class="project-name">🥋 합기도 3단 단증</h3>
